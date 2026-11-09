@@ -36,47 +36,58 @@
             min-height: 100vh;
         }
 
-        /* Top Header Navigation bar */
-        .app-header {
-            width: 100%;
-            background-color: var(--fbc-primary);
-            height: 60px;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+            /* Main Navigation Header */
+    .main-header {
+      background: #FFFFFF;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      padding: 16px 28px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
 
-        .header-title {
-            display: flex;
-            align-items: center;
-            font-size: 20px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            color: #ffffff;
-        }
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        .header-title .fbc { color: #ffffff; margin-right: 6px; }
-        .header-title .bank { color: #66b2ff; }
+    .brand-lockup {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+    }
 
-        .menu-icon {
-            font-size: 26px;
-            cursor: pointer;
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
+    .fbc-logo-img {
+      height: 48px;
+      width: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: block;
+    }
 
-        .menu-icon span {
-            display: block;
-            width: 24px;
-            height: 3px;
-            background-color: white;
-            border-radius: 2px;
+    .brand-text-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--fbc-blue);
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+
+    .brand-subtitle {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--fbc-gold-dark);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
         }
 
         /* Card Layout */
@@ -308,23 +319,20 @@
 </head>
 
 <body>
-
-<!-- Header Navigation Bar -->
-<div class="app-header">
-    <div style="width: 24px;"></div>
-    <div class="header-title">
-        <span class="fbc">FBC</span><span class="bank">Bank</span>
+    
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-lockup">
+        <img src="/assets/aistudio/IMG-20261106-WA0006_9fd08494.jpg" alt="FBC Bank Zimbabwe Logo" class="fbc-logo-img" />
+        <div class="brand-text-wrap">
+          <span class="brand-title">FBC BANK</span>
+          <span class="brand-subtitle">Zimbabwe</span>
+        </div>
+      </a>
+      <a href="login.html" class="header-login-link" style="color: var(--fbc-blue); font-size: 14px; font-weight: 700; text-decoration: none; padding: 8px 16px; border-radius: 8px; border: 1.5px solid var(--fbc-blue); transition: all 0.2s;">Client Login</a>
     </div>
-    <div class="menu-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</div>
-
-<div class="card">
-    <h1 class="main-title">Get Your Loan<br>Quickly</h1>
-    <div class="subtext">Fast Approval • Competitive Rates • Flexible Terms</div>
+  </header>
 
     <!-- Inside Calculator Box -->
     <div class="calculator-container">
